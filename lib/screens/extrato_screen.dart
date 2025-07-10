@@ -19,34 +19,68 @@ class ExtratoScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.add_circle_outline, size: 35),
+                    Icon(Icons.attach_money, size: 35),
                     SizedBox(width: 30),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'R\$ 1.000,00',
-                          style: TextStyle(fontSize: 24),
-                        ),
-                        Text('Entrada'),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'R\$ 1.000,00',
+                              style: TextStyle(fontSize: 24),
+                            ),
+                            Divider(
+                              color: Colors.black,
+                              thickness: 1,
+                              indent: 10,
+                              endIndent: 10,
+                            ),
+                            Text(
+                              '10/07/2025',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        )                        
                       ],
                     ),
                     // Icon(Icons.remove_circle_outline, size: 50),
                   ],
                 ),
+                Divider(
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  thickness: 1,
+                  indent: 10,
+                  endIndent: 10,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(Icons.remove_circle_outline, size: 35),
+                    Icon(Icons.money_off, size: 35),
                     SizedBox(width: 30),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'R\$ 1.000,00',
-                          style: TextStyle(fontSize: 24),
-                        ),
-                        Text('Saída'),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'R\$ 1.000,00',
+                              style: TextStyle(fontSize: 24),
+                            ),
+                            Divider(
+                              color: Colors.black,
+                              thickness: 1,
+                              indent: 10,
+                              endIndent: 10,
+                            ),
+                            Text(
+                              '09/07/2025',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        )
                       ],
                     ),
                     // Icon(Icons.remove_circle_outline, size: 50),

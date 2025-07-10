@@ -37,14 +37,14 @@ class HomeScreen extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.swap_horiz),
-              title: const Text('Transferência'),
+              title: const Text('Transferência Flux'),
               onTap: () {
                 Navigator.pushNamed(context, '/transferencia');
               },
             ),
             ListTile(
               leading: const Icon(Icons.key),
-              title: const Text('Chave de Transferência'),
+              title: const Text('Chave Flux'),
               onTap: () {
                 Navigator.pushNamed(context, '/chave-transferencia');
               },
