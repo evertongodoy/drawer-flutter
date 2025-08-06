@@ -1,3 +1,5 @@
+import 'package:drawer_flutter/screens/chave_cadastrar_screen.dart';
+import 'package:drawer_flutter/screens/chave_existe_screen.dart';
 import 'package:drawer_flutter/screens/chave_transferencia_screen.dart';
 import 'package:drawer_flutter/screens/extrato_screen.dart';
 import 'package:drawer_flutter/screens/home_screen.dart';
@@ -6,9 +8,14 @@ import 'package:drawer_flutter/screens/login_screen.dart';
 import 'package:drawer_flutter/screens/transferencia_screen.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 
-void main() {
+
+// void main() {
+Future<void> main() async {  
+  // WidgetsFlutterBinding.ensureInitialized(); // precisou colocar essa linha porque nao carregava a aplicacao e tambem precisou colocar o - .env dentro de assets no pubspec.yaml
+  await dotenv.load(fileName: ".env");
   runApp(const BancoApp());
 }
 
@@ -25,8 +32,11 @@ class BancoApp extends StatelessWidget {
       ),
       // home: const HomeScreen(),
       initialRoute: '/login',
+      // debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const HomeScreen(),  
+        '/': (context) => const HomeScreen(),
+        '/chave-cadastrar': (context) => const ChaveCadastrarScreen(),
+        '/chave-existente': (context) => const ChaveExisteScreen(),
         '/login': (context) => const LoginScreen(),
         '/carteira': (context) => const CarteiraScreen(),
         '/extrato': (context) => const ExtratoScreen(),
